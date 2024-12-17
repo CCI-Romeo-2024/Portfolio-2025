@@ -16,8 +16,8 @@ const config: StorybookConfig = {
     viteFinal: async (config) => {
         config.resolve.alias = {
             ...config.resolve.alias,
-            '@atoms': path.resolve(__dirname, '../src/stories/atoms'),
-            '@molecules': path.resolve(__dirname, '../src/stories/molecules'),
+            '@atoms': path.resolve(__dirname, '../src/design-system/atoms'),
+            '@molecules': path.resolve(__dirname, '../src/design-system/molecules'),
             '@assets': path.resolve(__dirname, '../src/assets'),
             '@css': path.resolve(__dirname, '../src/css'),
             '#': path.resolve(__dirname, '../src/'),

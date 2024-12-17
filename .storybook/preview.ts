@@ -12,6 +12,13 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        backgrounds: {
+            values: [
+                { name: 'wallpaper', value: '#ffffff url(https://i.pinimg.com/originals/80/05/82/80058231099b67cab36923f567d1db1a.jpg) center center/cover no-repeat local;' },
+                { name: 'light', value: '#ffffff' },
+                { name: 'dark', value: '#333' },
+            ],
+        },
     },
 };
 

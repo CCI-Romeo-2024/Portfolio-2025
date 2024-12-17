@@ -26,3 +26,11 @@ export const Contact: Story = {
         iconKey: 'contact'
     },
 };
+
+export const Spotify: Story = {
+    args: {
+        label: "Spotify",
+        state: 0,
+        iconKey: "whatsweb"
+    }
+};

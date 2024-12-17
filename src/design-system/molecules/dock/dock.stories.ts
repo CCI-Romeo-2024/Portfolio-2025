@@ -4,6 +4,7 @@ import { Dock } from './dock.tsx';
 const meta = {
     component: Dock,
     title: "Molecules/Dock",
+
 } satisfies Meta<typeof Dock>;
 
 export default meta;
@@ -11,6 +12,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
+    // 👇 Story-level parameters
+    parameters: {
+        backgrounds: {
+            default: 'dark',
+        },
+    },
     args: {
         apps: [
             {
@@ -19,8 +26,8 @@ export const Base: Story = {
                 state: 1
             },
             {
-                label: 'WhatsEcoSystem',
-                iconKey: 'whatsecosystem',
+                label: 'RootMe',
+                iconKey: 'rootme',
                 state: 0
             },
             {
