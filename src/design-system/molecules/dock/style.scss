@@ -1,0 +1,17 @@
+.dock {
+    display: flex;
+
+    gap: 2px;
+
+    border-radius: 16px;
+    border: 1px solid var(--border-dock);
+
+    padding: 4px 4px 5px 4px;
+
+    background: var(--bg-primary);
+
+    mix-blend-mode: luminosity;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(68px);
+
+}
