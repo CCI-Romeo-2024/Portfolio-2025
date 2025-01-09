@@ -9,12 +9,15 @@
         }
     ],
     "compilerOptions": {
+        "baseUrl": "./",
         "paths": {
             "@atoms/*": ["src/design-system/atoms/*"],
             "@molecules/*": ["src/design-system/molecules/*"],
             "@assets/*": ["src/assets/*"],
+            "@types/*": ["src/types/*"],
             "@css/*": ["src/css/*"],
-            "#/*": ["src/*"],
-        }
+            "#/*": ["src/*"]
+        },
+        "types": ["node"]
     }
 }

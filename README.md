@@ -1,4 +1,13 @@
-# React + TypeScript + Vite
+# Portfolio 2025
+
+## Todo
+
+- [ ] 3 dots Controls -> Add margin to have better user experience (4px)
+
+
+
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

@@ -1,4 +1,6 @@
 import type {StorybookConfig} from "@storybook/react-vite";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import path from 'path'
 
 const config: StorybookConfig = {
@@ -19,6 +21,7 @@ const config: StorybookConfig = {
             '@atoms': path.resolve(__dirname, '../src/design-system/atoms'),
             '@molecules': path.resolve(__dirname, '../src/design-system/molecules'),
             '@assets': path.resolve(__dirname, '../src/assets'),
+            '@types': path.resolve(__dirname, '../src/types'),
             '@css': path.resolve(__dirname, '../src/css'),
             '#': path.resolve(__dirname, '../src/'),
         };

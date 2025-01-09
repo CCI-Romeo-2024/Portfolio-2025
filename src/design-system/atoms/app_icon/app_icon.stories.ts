@@ -12,10 +12,16 @@ type Story = StoryObj<typeof meta>;
 
 
 export const Base: Story = {
+    parameters: {
+        backgrounds: {
+            default: 'wallpaper',
+        },
+    },
     args: {
         label: "WhatsWeb",
         state: 0,
-        iconKey: 'whatsweb'
+        iconKey: 'whatsweb',
+        index: 1
     },
 };
 
@@ -23,7 +29,8 @@ export const Contact: Story = {
     args: {
         label: "Contact",
         state: 1,
-        iconKey: 'contact'
+        iconKey: 'contact',
+        index: 2
     },
 };
 
@@ -31,6 +38,7 @@ export const Spotify: Story = {
     args: {
         label: "Spotify",
         state: 0,
-        iconKey: "whatsweb"
+        iconKey: "whatsweb",
+        index: 3
     }
 };

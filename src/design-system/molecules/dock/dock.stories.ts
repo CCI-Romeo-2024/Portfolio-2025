@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Dock } from './dock.tsx';
+import type {Meta, StoryObj} from '@storybook/react';
+import {Dock} from './dock.tsx';
 
 const meta = {
     component: Dock,
@@ -15,26 +15,31 @@ export const Base: Story = {
     // 👇 Story-level parameters
     parameters: {
         backgrounds: {
-            default: 'dark',
+            default: 'wallpaper',
         },
     },
     args: {
         apps: [
-            {
-                label: 'WhatsWeb',
-                iconKey: 'whatsweb',
-                state: 1
-            },
-            {
-                label: 'RootMe',
-                iconKey: 'rootme',
-                state: 0
-            },
-            {
-                label: 'Server',
-                iconKey: 'server',
-                state: 0
-            }
+            [
+                {
+                    label: 'WhatsWeb',
+                    iconKey: 'whatsweb',
+                    state: 1,
+                    onClick: () => { console.log('caca') }
+                },
+                {
+                    label: 'RootMe',
+                    iconKey: 'rootme',
+                    state: 0
+                }
+            ],
+            [
+                {
+                    label: 'Server',
+                    iconKey: 'server',
+                    state: 0
+                }
+            ]
         ]
     },
 };

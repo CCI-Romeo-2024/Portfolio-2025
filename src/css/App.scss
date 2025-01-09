@@ -1,0 +1,26 @@
+#app {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+
+    background: #ffffff url(https://i.pinimg.com/originals/80/05/82/80058231099b67cab36923f567d1db1a.jpg) center center/cover no-repeat local;;
+
+
+    .apps-container {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 24px - 68px);
+
+        .app-id-Cacacacazerr {
+            transform: translate(40px, 50px);
+        }
+    }
+
+    .dock {
+        align-self: center;
+    }
+}
