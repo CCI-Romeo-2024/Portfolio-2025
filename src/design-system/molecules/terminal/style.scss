@@ -10,17 +10,51 @@
 
     span, input {
         color: white;
-        font-size: 11px;
-        font-family: 'SFMono', 'system-ui';
+        font-size: 12px;
+        font-family: 'SFMono', 'SFProText', sans-serif;
+        //height: 19px;
 
 
     }
 
+    input {
+        vertical-align: bottom;
+
+        //justify-content: end;
+        //
+        //position: absolute;
+        //text-align: center;
+    }
+
+    .list {
+        &-element {
+            display: flex;
+
+            &-style {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 19px;
+            }
+
+            &-content {
+                width: calc(100% - 30px);
+                line-height: 19px;
+            }
+        }
+    }
+
+
+
     .line {
         display: flex;
-        gap: 5px;
+        gap: 6px;
 
-
+        .pre-command-text {
+            display: flex;
+            align-items: center;
+        }
 
 
 
@@ -33,34 +67,50 @@
 
         .white {
             color: #ffffff; /* Blanc pur */
+            fill: #ffffff;
+            stroke: #ffffff;
         }
 
         .black {
             color: #000000; /* Noir pur */
+            fill: #000000;
+            stroke: #000000;
         }
 
         .yellow {
             color: #ffff00; /* Jaune vif */
+            fill: #ffff00;
+            stroke: #ffff00;
         }
 
         .blue {
             color: #0000ff; /* Bleu vif */
+            fill: #0000ff;
+            stroke: #0000ff;
         }
 
         .purple {
             color: #ff00ff; /* Violet vif */
+            fill: #ff00ff;
+            stroke: #ff00ff;
         }
 
         .red {
             color: #ff0000; /* Rouge vif */
+            fill: #ff0000;
+            stroke: #ff0000;
         }
 
         .cyan {
             color: #00ffff; /* Cyan vif */
+            fill: #00ffff;
+            stroke: #00ffff;
         }
 
         .green {
             color: #00ff00; /* Vert vif */
+            fill: #00ff00;
+            stroke: #00ff00;
         }
     }
 }
