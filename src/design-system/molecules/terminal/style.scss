@@ -1,0 +1,66 @@
+.terminal {
+    display: flex;
+    flex-direction: column;
+
+    background: #1e1d1e;
+    color: white;
+
+    height: 340px;
+    width: 600px;
+
+    span, input {
+        color: white;
+        font-size: 11px;
+        font-family: 'SFMono', 'system-ui';
+
+
+    }
+
+    .line {
+        display: flex;
+        gap: 5px;
+
+
+
+
+
+
+
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .white {
+            color: #ffffff; /* Blanc pur */
+        }
+
+        .black {
+            color: #000000; /* Noir pur */
+        }
+
+        .yellow {
+            color: #ffff00; /* Jaune vif */
+        }
+
+        .blue {
+            color: #0000ff; /* Bleu vif */
+        }
+
+        .purple {
+            color: #ff00ff; /* Violet vif */
+        }
+
+        .red {
+            color: #ff0000; /* Rouge vif */
+        }
+
+        .cyan {
+            color: #00ffff; /* Cyan vif */
+        }
+
+        .green {
+            color: #00ff00; /* Vert vif */
+        }
+    }
+}

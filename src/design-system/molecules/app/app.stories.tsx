@@ -21,5 +21,7 @@ export const Base: Story = {
         label: 'WhatsWeb',
         uniqueKey: 'idk',
         children: <ProjectExample />,
+        state: 1,
+        type: 'project'
     },
 };

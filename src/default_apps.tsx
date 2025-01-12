@@ -1,5 +1,6 @@
 import {ProjectExample} from "@atoms/project_example/project_example.tsx";
-import {ReactElement} from 'react'
+import {ReactElement, StrictMode} from 'react'
+import {Terminal} from "@molecules/terminal/terminal.tsx";
 
 
 export interface IApp {
@@ -8,6 +9,7 @@ export interface IApp {
     content: ReactElement,
     iconKey: 'whatsweb' | 'whatsecosystem' | 'server' | 'rootme' | 'oknestor' | 'contact' | 'document' | 'pages',
     state: 0 | 1 | 2,
+    type: 'application' | 'project',
     onClick?: () => void;
 }
 
@@ -18,14 +20,16 @@ export const defaultApps: IApp[][] = [
             id: 'whatsweb',
             content: <ProjectExample key={'whatsweb'} />,
             iconKey: 'whatsweb',
-            state: 2
+            state: 0,
+            type: 'project'
         },
         {
             label: 'RootMe',
             id: 'rootme',
-            content: <ProjectExample key={'rootme'} />,
+            content: <StrictMode><Terminal key={'rootme'} /></StrictMode>,
             iconKey: 'rootme',
-            state: 0,
+            state: 2,
+            type: 'application'
             // onClick: () => { openFullscreen(document.querySelector('#app')) }
         }
     ],
@@ -35,7 +39,8 @@ export const defaultApps: IApp[][] = [
             id: 'contact',
             content: <ProjectExample key={'contact'} />,
             iconKey: 'contact',
-            state: 0
+            state: 0,
+            type: 'project'
         }
     ]
 ]

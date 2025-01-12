@@ -83,7 +83,7 @@ function MacOS() {
 
             {apps.map((appGroup, groupIndex) => (
                 appGroup.map((app, appIndex) => (
-                    <App label={app.label} state={app.state} uniqueKey={app.id} key={groupIndex+appIndex} onMouseDown={(e) => {handleZIndexBoost(e, app)}} updateState={(newState) => updateAppState(app.id, newState)}>
+                    <App label={app.label} state={app.state} uniqueKey={app.id} type={app.type} key={groupIndex+appIndex} onMouseDown={(e) => {handleZIndexBoost(e, app)}} updateState={(newState) => updateAppState(app.id, newState)}>
                         {app.content}
                     </App>
                 ))
