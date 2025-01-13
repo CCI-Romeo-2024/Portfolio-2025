@@ -138,8 +138,8 @@ export const Terminal = () => {
             commandDesc: 'Display this help menu',
             cb: () => {
                 return <div className={'list'}>
-                    {commandsList.map(command =>
-                        <Li><C c='red'>{command.commandUsage}</C> <C c='white'> - {command.commandDesc}</C></Li>)}
+                    {commandsList.map((command, i) =>
+                        <Li key={i}><C c='red'>{command.commandUsage}</C> <C c='white'> - {command.commandDesc}</C></Li>)}
 
                     <Li><C>press </C><C c='red'>up arrow / down arrow</C><C>{' - Select history commands'}</C></Li>
                     <Li><C>press </C><C c='red'>tab</C><C>{' - Auto complete'}</C></Li>

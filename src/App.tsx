@@ -112,6 +112,9 @@ function MacOS() {
     }
 
     const handleMouseDown = (e: MouseEvent) => {
+        const target = e.target as HTMLElement
+        if (!target?.classList.contains('apps-container')) return;
+
         e.preventDefault();
 
         firstPosX = e.pageX;

@@ -1,18 +1,12 @@
-:root {
-    --pj-bg: #191919;
-    --pj-txt: #fff;
-    --pj-txt-sc: #d2d2d2;
-    --pj-width: 75%;
-
-}
-
 .project-pr-title {
+    font-weight: bold;
     font-size: 1.75em;
     color: var(--pj-txt);
 }
 
 .project-sc-title {
-    font-size: 1em;
+    font-size: 1.5em;
+    font-weight: 500;
     color: var(--pj-txt);
 }
 
@@ -22,19 +16,17 @@
 }
 
 .project-pr-text {
-    font-size: 0.75em;
+    font-size: 0.9em;
     color: var(--pj-txt);
 }
 
 .project-sc-text {
-    font-size: 0.75em;
+    font-size: 0.9em;
     color: var(--pj-txt-sc);
 }
 
 .project {
     width: 777px;
-    height: 432px;
-    overflow: auto;
 
     background: var(--pj-bg);
     color: var(--pj-txt);
@@ -45,9 +37,10 @@
     align-items: center;
 
 
+
     &-header {
-        margin-top: 70px;
-        margin-bottom: 10px;
+        margin-top: 55px;
+        margin-bottom: 30px;
 
         display: flex;
         justify-content: space-between;
@@ -64,6 +57,10 @@
             }
 
             &-sub-title {
+                font-size: 1em;
+                font-weight: 400;
+                // color: var(--pj-txt);
+                color: var(--pj-txt-sc);
             }
         }
 
@@ -73,39 +70,45 @@
     }
 
     &-body {
-        padding: 1rem 0;
-
         display: flex;
         flex-direction: column;
 
         align-items: center;
 
+        &-preview {
+            height: 240px;
+            width: 91%;
+
+            background-color: #f9f9f9;
+
+            border: 1px dashed #ddd;
+
+            margin-bottom: 55px;
+        }
+
         &-section {
             width: var(--pj-width);
-            margin-bottom: 2rem;
+            margin-bottom: 45px;
 
             &-title {
-                //font-size: 1.5rem;
-                //font-weight: bold;
-                margin-bottom: 1rem;
+                margin-bottom: 14px;
             }
 
             &-text {
-                //font-size: 1rem;
-                //line-height: 1.5;
-                //color: #333;
+
             }
 
             &-images {
                 display: flex;
                 gap: 1rem;
-                margin-top: 1rem;
+                margin-top: 30px;
 
                 justify-content: space-between;
 
                 img {
                     width: 49%;
-                    //height: 100px;
+
+                    background-color: #f9f9f9;
                     aspect-ratio: 5/4;
                     object-fit: cover;
                     border-radius: 5px;
@@ -113,12 +116,124 @@
                 }
             }
         }
+    }
 
-        &-preview {
-            height: 200px;
-            width: 90%;
-            background-color: #f9f9f9;
-            border: 1px dashed #ddd;
+    &-demo {
+        width: var(--pj-width);
+        margin-bottom: 55px;
+
+        &-title {
+            margin-bottom: 16px;
+        }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-interactive {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    margin-bottom: 4px;
+                }
+
+                gap: 2px;
+
+
+                a {
+                    color: #7b74fd;
+                    text-decoration: underline;
+                }
+
+
+                div {
+                    display: flex;
+                    white-space: pre;
+                }
+
+            }
+
+            &-video {
+                a {
+                    padding: 15px 30px;
+                    border-radius: 200px;
+                    background-color: #7b74fd;
+
+                    display: flex;
+                    white-space: pre;
+                    align-items: center;
+
+                    gap: 10px;
+
+                    svg {
+                        transform: rotate(45deg);
+
+                        transition: transform 350ms ease-in-out;
+                    }
+
+                    &:hover svg {
+                        transform: rotate(0);
+                    }
+                }
+            }
         }
     }
+
+
+    ul {
+        list-style-type: disc;
+        margin-top: 8px;
+        padding-left: 1.25em;
+
+        li {
+
+        }
+    }
+
+
+
+    .bold {
+        font-weight: 500;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
 }
+
+
+.copy-text-component {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &, svg {
+        cursor: pointer;
+    }
+
+
+    .icon {
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 100ms ease-in-out;
+
+    }
+
+    &:hover > .icon {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+

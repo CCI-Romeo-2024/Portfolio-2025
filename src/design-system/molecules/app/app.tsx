@@ -1,4 +1,5 @@
 import {PropsWithChildren, useState, useEffect, useRef, MutableRefObject} from "react";
+import './style.scss'
 import './style-project.scss'
 import './style-application.scss'
 
