@@ -84,8 +84,10 @@ function MacOS() {
 
 
     const handleMouseMove = (e: MouseEvent) => {
-        // e.preventDefault();
         if (!mousePressed || !selectZoneRef.current) return
+        // e.preventDefault();
+
+        // console.log(e.target)
 
         const edgeX = e.pageX - firstPosX;
         const edgeY = e.pageY - firstPosY;
@@ -110,8 +112,7 @@ function MacOS() {
     }
 
     const handleMouseDown = (e: MouseEvent) => {
-        // e.preventDefault();
-
+        e.preventDefault();
 
         firstPosX = e.pageX;
         firstPosY = e.pageY;

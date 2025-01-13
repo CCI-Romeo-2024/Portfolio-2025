@@ -1,116 +1,117 @@
 .terminal {
-    display: flex;
-    flex-direction: column;
-
     background: #1e1d1e;
     color: white;
 
     height: 340px;
     width: 600px;
 
-    span, input {
-        color: white;
-        font-size: 12px;
-        font-family: 'SFMono', 'SFProText', sans-serif;
-        //height: 19px;
+    overflow: auto;
+
+    &-content {
+        padding-top: 6px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 3px;
 
 
-    }
+        div, span, input {
+            color: white;
+            font-size: 12px;
+            font-family: 'SFMono', 'SFProText', sans-serif;
+        }
 
-    input {
-        vertical-align: bottom;
+        .list {
+            &-element {
+                display: flex;
 
-        //justify-content: end;
-        //
-        //position: absolute;
-        //text-align: center;
-    }
+                &-style {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 19px;
+                }
 
-    .list {
-        &-element {
+                &-content {
+                    width: calc(100% - 30px);
+                    line-height: 19px;
+                }
+            }
+        }
+
+        .command-out {
+            margin-bottom: 3px;
+        }
+
+        .line {
             display: flex;
+            gap: 6px;
+            //padding-bottom: 3px;
+            min-height: 18px;
 
-            &-style {
+            .pre-command-text {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                width: 30px;
-                height: 19px;
             }
 
-            &-content {
-                width: calc(100% - 30px);
-                line-height: 19px;
+
+
+
+
+
+            .bold {
+                font-weight: bold;
             }
-        }
-    }
 
+            .white {
+                color: #ffffff; /* Blanc pur */
+                fill: #ffffff;
+                stroke: #ffffff;
+            }
 
+            .black {
+                color: #000000; /* Noir pur */
+                fill: #000000;
+                stroke: #000000;
+            }
 
-    .line {
-        display: flex;
-        gap: 6px;
+            .yellow {
+                color: #ffff00; /* Jaune vif */
+                fill: #ffff00;
+                stroke: #ffff00;
+            }
 
-        .pre-command-text {
-            display: flex;
-            align-items: center;
-        }
+            .blue {
+                color: #0000ff; /* Bleu vif */
+                fill: #0000ff;
+                stroke: #0000ff;
+            }
 
+            .purple {
+                color: #ff00ff; /* Violet vif */
+                fill: #ff00ff;
+                stroke: #ff00ff;
+            }
 
+            .red {
+                color: #ff0000; /* Rouge vif */
+                fill: #ff0000;
+                stroke: #ff0000;
+            }
 
+            .cyan {
+                color: #00ffff; /* Cyan vif */
+                fill: #00ffff;
+                stroke: #00ffff;
+            }
 
-
-
-        .bold {
-            font-weight: bold;
-        }
-
-        .white {
-            color: #ffffff; /* Blanc pur */
-            fill: #ffffff;
-            stroke: #ffffff;
-        }
-
-        .black {
-            color: #000000; /* Noir pur */
-            fill: #000000;
-            stroke: #000000;
-        }
-
-        .yellow {
-            color: #ffff00; /* Jaune vif */
-            fill: #ffff00;
-            stroke: #ffff00;
-        }
-
-        .blue {
-            color: #0000ff; /* Bleu vif */
-            fill: #0000ff;
-            stroke: #0000ff;
-        }
-
-        .purple {
-            color: #ff00ff; /* Violet vif */
-            fill: #ff00ff;
-            stroke: #ff00ff;
-        }
-
-        .red {
-            color: #ff0000; /* Rouge vif */
-            fill: #ff0000;
-            stroke: #ff0000;
-        }
-
-        .cyan {
-            color: #00ffff; /* Cyan vif */
-            fill: #00ffff;
-            stroke: #00ffff;
-        }
-
-        .green {
-            color: #00ff00; /* Vert vif */
-            fill: #00ff00;
-            stroke: #00ff00;
+            .green {
+                color: #00ff00; /* Vert vif */
+                fill: #00ff00;
+                stroke: #00ff00;
+            }
         }
     }
 }

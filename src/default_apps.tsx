@@ -1,6 +1,7 @@
-import {ProjectExample} from "@atoms/project_example/project_example.tsx";
-import {ReactElement, StrictMode} from 'react'
-import {Terminal} from "@molecules/terminal/terminal.tsx";
+import { ProjectTemplate } from "@atoms/project_template/project_template.tsx";
+import { ProjectExample } from "@atoms/project_example/project_example.tsx";
+import { ReactElement } from 'react'
+import { Terminal } from "@molecules/terminal/terminal.tsx";
 
 
 export interface IApp {
@@ -18,17 +19,17 @@ export const defaultApps: IApp[][] = [
         {
             label: 'WhatsWeb',
             id: 'whatsweb',
-            content: <ProjectExample key={'whatsweb'} />,
+            content: <ProjectTemplate key={'whatsweb'} />,
             iconKey: 'whatsweb',
-            state: 0,
+            state: 2,
             type: 'project'
         },
         {
             label: 'RootMe',
             id: 'rootme',
-            content: <StrictMode><Terminal key={'rootme'} /></StrictMode>,
+            content: <Terminal key={'rootme'} />,
             iconKey: 'rootme',
-            state: 2,
+            state: 0,
             type: 'application'
             // onClick: () => { openFullscreen(document.querySelector('#app')) }
         }

@@ -42,13 +42,20 @@ export const Terminal = () => {
         setTerminalContent((prev) => [...prev, content]);
     };
 
+    const clearTerminalContent = () => {
+        setTerminalContent([]);
+        setLineNumber(0);
+
+        setTimeout(() => initTerminal(), 0);
+    };
+
     const newLine = () => {
         if (lastInput.current)
             lastInput.current.readOnly = true;
 
 
         addTerminalContent(
-            <Line gap={'7px'}>
+            <Line gap={'8px'}>
                 <C c='green'>
                     <svg height="7" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5 4H9.5M9.5 4L6.5 1M9.5 4L6.5 7" strokeWidth="2" strokeLinecap="round"/>
@@ -64,11 +71,13 @@ export const Terminal = () => {
 
     type commandsList = {
         commandName: string;
+        commandDesc: string;
+        commandUsage: string;
         cb: (args: string[]) => JSX.Element | null;
     }[]
 
     const Li = ({c = 'white', children}: PropsWithChildren<ColorInterface>) => {
-        return <div className='list-element' key={'caca'}>
+        return <div className='list-element'>
             <div className="list-element-style">
                 <svg className={c} width="6" height="6" viewBox="0 0 4 4" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -84,28 +93,60 @@ export const Terminal = () => {
 
     const commandsList: commandsList = [
         {
-            commandName: "help",
+            commandName: 'cat',
+            commandUsage: 'cat <file>',
+            commandDesc: 'See the content of <file>',
+            cb: () => {
+
+
+                return null;
+            },
+        },
+        {
+            commandName: 'cd',
+            commandUsage: 'cd <dir>',
+            commandDesc: 'Move into <dir>, "cd .." to move to the parent directory, "cd" or "cd ~" to return to root',
+            cb: () => {
+
+
+                return null;
+            },
+        },
+        {
+            commandName: 'ls',
+            commandUsage: 'ls',
+            commandDesc: 'See files and directories in the current directory',
+            cb: () => {
+
+
+                return null;
+            },
+        },
+        {
+            commandName: 'clear',
+            commandUsage: 'clear',
+            commandDesc: 'Clear the screen',
+            cb: () => {
+                clearTerminalContent()
+
+                return null;
+            }
+        },
+        {
+            commandName: 'help',
+            commandUsage: 'help',
+            commandDesc: 'Display this help menu',
             cb: () => {
                 return <div className={'list'}>
-                    <Li><C c='red'>{'cat <file>'}</C> <C c='white'> - cat</C></Li>
+                    {commandsList.map(command =>
+                        <Li><C c='red'>{command.commandUsage}</C> <C c='white'> - {command.commandDesc}</C></Li>)}
 
-                    <Li><C c='red'>{'<ls>'}</C><C c='white'> - cat</C></Li>
-
-                    <Li><C c='red'>{'cd <dossier>'}</C><C>{' - Se déplace dans <dossier>, "cd .." pour se déplacer dans le dossier parent, "cd ~" pour se déplacer au T'}</C></Li>
-
-                    <Li><C c='red'>{'git'}</C><C c='white'>{'- My github'}</C></Li>
+                    <Li><C>press </C><C c='red'>up arrow / down arrow</C><C>{' - Select history commands'}</C></Li>
+                    <Li><C>press </C><C c='red'>tab</C><C>{' - Auto complete'}</C></Li>
                 </div>
 
 
             }
-        },
-        {
-            commandName: "clear",
-            cb: () => {
-                setTerminalContent(() => [])
-
-                return null;
-            },
         }
     ]
 
@@ -116,7 +157,7 @@ export const Terminal = () => {
 
         const command = commandsList.find(command => command.commandName?.toLowerCase() === commandName?.toLowerCase());
         if (!command) {
-            // caca
+            addTerminalContent(<CommandOutput><C>zsh: command not found: {commandName}</C></CommandOutput>)
 
             return;
         }
@@ -124,6 +165,7 @@ export const Terminal = () => {
         const returnCommand = command.cb(args)
         if (returnCommand)
             addTerminalContent(<CommandOutput>{returnCommand}</CommandOutput>)
+
 
     }
 
@@ -134,10 +176,22 @@ export const Terminal = () => {
 
             commandManager(lastInput.current?.value);
 
-            newLine();
+            setTimeout(() => {
+                newLine()
+            }, 0);
         }
     };
 
+
+    const initTerminal = () => {
+        // lastInput.current = null;
+        addTerminalContent(
+            <div className={'line'}>
+                <C c={"green"}>ヽ(ˋ▽ˊ)ノ</C><C>: Hey, you found the terminal! Type `help` to get started.</C>
+            </div>)
+
+        // newLine();
+    }
 
     const handleClick = () => {
         console.log('⬅️ Focus Input');
@@ -145,22 +199,20 @@ export const Terminal = () => {
             lastInput.current.focus()
     };
 
-    let init = false;
+    const initRef = useRef(false);
 
     useEffect(() => {
-        if (init) return
+        if (initRef.current) return
 
-        newLine();
-        init = true;
+        initTerminal();
+        newLine()
+
+        initRef.current = true;
     }, []);
-
-    useEffect(() => {
-        console.log("lineNumber after render:", lineNumber); // Log après chaque rendu
-    }, [lineNumber]);
 
     return (
         <div className="terminal terminal-app" id="terminal" onClick={handleClick}>
-            <div className="content" id="terminal-content" ref={terminalRef}>
+            <div className="terminal-content" id="terminal-content" ref={terminalRef}>
                 {terminalContent.map((content, index) => (
                     <Fragment key={index}>{content}</Fragment>
                 ))}
