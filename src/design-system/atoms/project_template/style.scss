@@ -26,8 +26,6 @@
 }
 
 .project {
-    width: 777px;
-
     background: var(--pj-bg);
     color: var(--pj-txt);
 
@@ -77,11 +75,11 @@
 
         &-preview {
             height: 240px;
-            width: 91%;
+            width: min(91%, 1000px);
 
-            background-color: #f9f9f9;
+            // background-color: #f9f9f9;
 
-            border: 1px dashed #ddd;
+            border: 1px solid #ddd;
 
             margin-bottom: 55px;
         }
@@ -223,7 +221,6 @@
         align-items: center;
         opacity: 0;
         transition: opacity 100ms ease-in-out;
-
     }
 
     &:hover > .icon {

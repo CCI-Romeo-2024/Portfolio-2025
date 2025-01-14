@@ -36,16 +36,16 @@
 
 
             &-svg {
-                width: 38px;
-                height: 28px;
+                width: 32px;
+                height: 33px;
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
 
-            & > input {
-                width: auto;
+            input {
+                width: calc(223px - 32px);
                 padding: 7px 0;
             }
         }
@@ -75,19 +75,22 @@
                 gap: 3px;
 
                 li {
-                    font-size: .9em;
+                    a {
+                        font-size: .9em;
 
-                    padding: 9px 6px;
-                    border-radius: 6px;
+                        display: block;
 
-                    transition: background-color 100ms ease-in-out;
+                        padding: 9px 6px;
+                        border-radius: 6px;
 
+                        transition: background-color 100ms ease-in-out;
+                    }
 
-                    &.active {
+                    &.active a {
                         background-color: #1B7EFF;
                     }
 
-                    &:hover:not(.active) {
+                    &:hover:not(.active) a {
                         background-color: rgba(255, 255, 255, 0.25);
                     }
                 }
@@ -129,10 +132,6 @@
 
                 li {
                     & > a{
-                        &, svg, path, ellipse {
-                            cursor: pointer;
-                        }
-
                         height: 65px;
                         width: 85px;
                         background-color: rgba(255, 255, 255, 0.23);
@@ -154,6 +153,10 @@
                         gap: 6px;
 
                         font-size: .9em;
+
+                        &, svg, path, ellipse {
+                            cursor: pointer;
+                        }
                     }
                     &:nth-child(3) > a {
                         padding-top: 2px;

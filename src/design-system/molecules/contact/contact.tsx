@@ -33,10 +33,9 @@ export const Contact = () => {
                 <span className={'contact-list-az-letter'}>M</span>
                 <hr className={'contact-list-az-hr'}/>
                 <ul className={'contact-list-az-list'}>
-                    <li className={'active'}>Mon <S bold>Contact</S></li>
-                    <li><a href={'https://github.com/69Nesta'} target={'_blank'}>Mon <S bold>GitHub</S></a></li>
-                    <li><a href={'https://linkedin.com/in/romeo-petit'} target={'_blank'}>Mon <S bold>Linkedin</S></a>
-                    </li>
+                    <li className={'active'}><a>Mon <S bold>Contact</S></a></li>
+                    <li className={''}><a href={'https://github.com/69Nesta'} target={'_blank'}>Mon <S bold>GitHub</S></a></li>
+                    <li className={''}><a href={'https://linkedin.com/in/romeo-petit'} target={'_blank'}>Mon <S bold>Linkedin</S></a></li>
                 </ul>
             </div>
         </div>
@@ -67,7 +66,7 @@ export const Contact = () => {
                         </a>
                     </li>
                     <li>
-                        <a href={'https://linkedin.com/in/romeo-petit'}>
+                        <a href={'https://linkedin.com/in/romeo-petit'} target={'_blank'}>
                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -102,16 +101,18 @@ export const Contact = () => {
                     </a>
                 </div>
                 <div className={'contact-content-body-flex'}>
-                    <a href={'https://linkedin.com/in/romeo-petit'} className={'card card-linkedin'}>
+                    <a href={'https://linkedin.com/in/romeo-petit'} target={'_blank'} className={'card card-linkedin'}>
                         <h4>Linkedin</h4>
                         <span>linkedin.com/in/romeo-petit</span>
                     </a>
-                    <a href={'https://github.com/69Nesta'} className={'card card-email'}>
+                    <a href={'https://github.com/69Nesta'} target={'_blank'} className={'card card-email'}>
                         <h4>GitHub</h4>
                         <span>github.com/69Nesta</span>
                     </a>
                 </div>
-                <a href={'https://www.google.fr/maps/place/Annecy/@45.9008323,5.535645,10z/data=!3m1!4b1!4m6!3m5!1s0x478b8fe55861febb:0x6a90ac32b5ab892b!8m2!3d45.9058956!4d6.1259117!16s%2Fg%2F11bc5n2nv3?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D'} className={'contact-content-body-full card'}>
+                <a className={'contact-content-body-full card'}
+                   href={'https://www.google.fr/maps/place/Annecy/@45.9008323,5.535645,10z/data=!3m1!4b1!4m6!3m5!1s0x478b8fe55861febb:0x6a90ac32b5ab892b!8m2!3d45.9058956!4d6.1259117!16s%2Fg%2F11bc5n2nv3?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D'}
+                   target={'_blank'}>
                     <h4>Adresse</h4>
                     <span>France, Haute-Savoie, Annecy - 74000</span>
                 </a>

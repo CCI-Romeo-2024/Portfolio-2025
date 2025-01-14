@@ -1,5 +1,9 @@
-import '@atoms/project_template/style.scss'
 import {Copy, S} from '@atoms/project_template/project_template.tsx';
+import '@atoms/project_template/style.scss'
+import './style.scss'
+
+import Image1 from './assets/image_1.png'
+import Image2 from './assets/image_2.png'
 
 export const WhatsWebProject = () => {
     return <div className={'project'}>
@@ -18,7 +22,7 @@ export const WhatsWebProject = () => {
             </div>
         </div>
         <div className={'project-body'}>
-            <div className={'project-body-preview'}>
+            <div className={'project-body-preview whatsweb'}>
 
             </div>
             <div className={'project-body-section'}>
@@ -33,8 +37,8 @@ export const WhatsWebProject = () => {
                 </p>
 
                 <div className={'project-body-section-images'}>
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
+                    <img src={Image1} alt=""/>
+                    <img src={Image2} alt=""/>
                 </div>
             </div>
             <div className={'project-body-section'}>
@@ -98,7 +102,7 @@ export const WhatsWebProject = () => {
                 <h3 className={''}>Ou</h3>
 
                 <div className='project-demo-content-video'>
-                    <a href='https://www.youtube.com/watch?v=qsX7QknTrW0' target={'_blank'}
+                    <a href='https://youtu.be/qsX7QknTrW0' target={'_blank'}
                        className={'btn-watch-demo'}>Regarder la vidéo
                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.292893 11.2929C-0.0976311 11.6834 -0.0976311 12.3166 0.292893 12.7071C0.683418 13.0976 1.31658 13.0976 1.70711 12.7071L0.292893 11.2929ZM13 0.999999C13 0.447714 12.5523 -8.70777e-07 12 -8.70777e-07L3 -8.70777e-07C2.44772 -8.70777e-07 2 0.447714 2 0.999999C2 1.55228 2.44772 2 3 2H11V10C11 10.5523 11.4477 11 12 11C12.5523 11 13 10.5523 13 10L13 0.999999ZM1.70711 12.7071L12.7071 1.70711L11.2929 0.292892L0.292893 11.2929L1.70711 12.7071Z"
