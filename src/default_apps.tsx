@@ -1,8 +1,9 @@
-// import { ProjectTemplate } from "@atoms/project_template/project_template.tsx";
 import { ReactElement } from 'react'
-// import { Terminal } from "@molecules/terminal/terminal.tsx";
-import { Contact } from "@molecules/contact/contact.tsx";
-import { OkNestorProject, RootmeProject, ServerProject, WhatsWebProject } from "@projects/index.ts";
+
+// import { ProjectTemplate } from '@atoms/project_template/project_template.tsx';
+// import { Terminal } from '@molecules/terminal/terminal.tsx';
+import { Contact } from '@molecules/contact/contact.tsx';
+import { OkNestorProject, RootmeProject, ServerProject, WhatsWebProject } from '@projects/index.ts';
 
 
 export interface IApp {
