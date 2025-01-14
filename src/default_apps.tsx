@@ -58,9 +58,7 @@ export const defaultApps: IApp[][] = [
             iconKey: 'contact',
             state: 0,
             type: 'contact'
-        }
-    ],
-    [
+        },
         {
             label: 'CV.pdf',
             id: 'cv',
