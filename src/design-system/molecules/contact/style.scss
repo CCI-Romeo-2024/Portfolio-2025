@@ -23,7 +23,7 @@
         width: var(--contact-list-w);
         height: 100%;
 
-        border-right: 1px solid #929292;
+        border-right: 1px solid rgba(146, 146, 146, 0.25);
         background: #2C2C2C;
 
         &-search {
@@ -102,7 +102,7 @@
     &-content {
         width: calc(var(--contact-w) - var(--contact-list-w));
         height: 100%;
-        background: #000;
+        background: #121212;
         position: relative;
         display: flex;
         flex-direction: column;
