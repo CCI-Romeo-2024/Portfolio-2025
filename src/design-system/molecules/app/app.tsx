@@ -2,6 +2,7 @@ import {PropsWithChildren, useState, useEffect, useRef, MutableRefObject} from "
 import './style.scss'
 import './style-project.scss'
 import './style-application.scss'
+import './style-contact.scss'
 
 import {Controls} from "@atoms/controls/controls.tsx";
 
@@ -10,7 +11,7 @@ interface IAppC {
     label: string,
     uniqueKey: string,
     state: 0 | 1 | 2,
-    type: 'project' | 'application',
+    type: 'project' | 'application' | 'contact',
     onMouseDown?: (e: MutableRefObject<HTMLDivElement | null>) => void,
     updateState?: (newState: 0 | 1 | 2) => void,
 }
