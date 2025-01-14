@@ -23,23 +23,57 @@ export const Base: Story = {
             [
                 {
                     label: 'WhatsWeb',
+                    id: 'whatsweb',
+                    content: null,
                     iconKey: 'whatsweb',
-                    state: 1,
-                    onClick: () => { console.log('caca') }
+                    state: 2,
+                    type: 'project'
+                },
+                {
+                    label: 'Server',
+                    id: 'server',
+                    content: null,
+                    iconKey: 'server',
+                    state: 0,
+                    type: 'project'
                 },
                 {
                     label: 'RootMe',
+                    id: 'rootme',
+                    content: null,
                     iconKey: 'rootme',
-                    state: 0
+                    state: 0,
+                    type: 'project'
+                },
+                {
+                    label: 'OkNestor',
+                    id: 'oknestor',
+                    content: null,
+                    iconKey: 'oknestor',
+                    state: 0,
+                    type: 'project'
                 }
             ],
             [
                 {
-                    label: 'Server',
-                    iconKey: 'server',
-                    state: 0
+                    label: 'Contact',
+                    id: 'contact',
+                    content: null,
+                    iconKey: 'contact',
+                    state: 0,
+                    type: 'contact'
+                },
+                {
+                    label: 'CV.pdf',
+                    id: 'cv',
+                    content: null,
+                    iconKey: 'document',
+                    state: 0,
+                    type: 'contact',
+                    onClick: () => { if (window) window.open('https://cdn.whatsweb.fr/CV.pdf', '_blank')!.focus(); }
                 }
             ]
-        ]
-    },
+        ],
+        updateAppState: () => {},
+    }
 };
