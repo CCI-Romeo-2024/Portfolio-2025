@@ -5,6 +5,10 @@ import './style-application.scss'
 import './style-contact.scss'
 
 import {Controls} from "@atoms/controls/controls.tsx";
+import {openFullscreen} from "#/lib/fullscreen.tsx";
+
+
+const ACCEPTED_FULLSCREEN_APP_TYPES: IAppC['type'][] = ['project']
 
 
 interface IAppC {
@@ -28,8 +32,10 @@ export const App = ({label, uniqueKey, state, type, children, onMouseDown = () =
 
     }, [state])
 
+    const bodyRef = useRef<HTMLDivElement>(null);
 
-    return <div className={`app app-${type} app-id-${uniqueKey} ${isVisible ? 'active' : ''}`} ref={component} onMouseDown={() => onMouseDown(component)}>
+
+    return <div className={`app app-${type} app-id-${uniqueKey} app-i- ${isVisible ? 'active' : ''}`} ref={component} onMouseDown={() => onMouseDown(component)}>
         <div className={`app-header app-${type}-header`}>
             <Controls
                 onClose={() => {
@@ -40,10 +46,13 @@ export const App = ({label, uniqueKey, state, type, children, onMouseDown = () =
                     setVisibility(false);
                     updateState(1)
                 }}
+                onFullScreen={ACCEPTED_FULLSCREEN_APP_TYPES.includes(type) ? () => {
+                    openFullscreen(bodyRef.current)
+                } : undefined}
             />
             <div className={`app-header-name app-${type}-header-name unselectable`}>{label}</div>
         </div>
-        <div className={`app-body app-${type}-body`}>
+        <div className={`app-body app-${type}-body app-id-${uniqueKey}-body`} ref={bodyRef}>
             {children}
         </div>
     </div>
