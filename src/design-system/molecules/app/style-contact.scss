@@ -24,11 +24,11 @@
 
         width: 250px;
 
-        padding: 7px 7px;
+        padding: 13px 13px;
         display: flex;
         align-items: center;
 
-        height: 26px;
+        height: calc(14px + 13px*2);
 
 
         &-name {

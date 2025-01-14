@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 
 import '@css/reset.css'
 import '@css/global.scss'
-import '@css/cursors.scss'
+// import '@css/cursors.scss'
 
 import MacOS from './App.tsx'
 

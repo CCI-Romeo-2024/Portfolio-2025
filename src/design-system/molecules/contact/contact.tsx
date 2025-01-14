@@ -44,7 +44,7 @@ export const Contact = () => {
             <div className={'contact-content-banner'}>
                 <ul>
                     <li>
-                        <a href="">
+                        <a href={'tel:+330664889971'}>
                             <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -56,7 +56,7 @@ export const Contact = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href={'tel:+330664889971'}>
                             <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -67,7 +67,7 @@ export const Contact = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href={'https://linkedin.com/in/romeo-petit'}>
                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -78,7 +78,7 @@ export const Contact = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href={'mailto:petitromeo74@gmail.com'}>
                             <svg width="24" height="17" viewBox="0 0 24 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd"
@@ -92,26 +92,26 @@ export const Contact = () => {
             </div>
             <div className={'contact-content-body'}>
                 <div className={'contact-content-body-flex'}>
-                    <a href={''} className={'card card-name'}>
+                    <a href={'tel:+330664889971'} className={'card card-name'}>
                         <h4>Telephone</h4>
                         <span>06 64 88 99 71</span>
                     </a>
-                    <a href={''} className={'card card-email'}>
+                    <a href={'mailto:petitromeo74@gmail.com'} className={'card card-email'}>
                         <h4>Email</h4>
                         <span>petitromeo74@gmail.com</span>
                     </a>
                 </div>
                 <div className={'contact-content-body-flex'}>
-                    <a href={''} className={'card card-linkedin'}>
+                    <a href={'https://linkedin.com/in/romeo-petit'} className={'card card-linkedin'}>
                         <h4>Linkedin</h4>
                         <span>linkedin.com/in/romeo-petit</span>
                     </a>
-                    <a href={''} className={'card card-email'}>
+                    <a href={'https://github.com/69Nesta'} className={'card card-email'}>
                         <h4>GitHub</h4>
                         <span>github.com/69Nesta</span>
                     </a>
                 </div>
-                <a href={''} className={'contact-content-body-full card'}>
+                <a href={'https://www.google.fr/maps/place/Annecy/@45.9008323,5.535645,10z/data=!3m1!4b1!4m6!3m5!1s0x478b8fe55861febb:0x6a90ac32b5ab892b!8m2!3d45.9058956!4d6.1259117!16s%2Fg%2F11bc5n2nv3?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D'} className={'contact-content-body-full card'}>
                     <h4>Adresse</h4>
                     <span>France, Haute-Savoie, Annecy - 74000</span>
                 </a>

@@ -27,6 +27,7 @@
             "@molecules/*": [
                 "src/design-system/molecules/*"
             ],
+            "@projects/*": ["src/design-system/projects/*"],
             "@assets/*": [
                 "src/assets/*"
             ],

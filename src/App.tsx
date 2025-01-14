@@ -143,13 +143,13 @@ function MacOS() {
         <div className="apps-container" ref={appsContainer}>
 
             {apps.map((appGroup, groupIndex) => (
-                appGroup.map((app, appIndex) => (
-                    <App label={app.label} state={app.state} uniqueKey={app.id} type={app.type} key={groupIndex+appIndex} onMouseDown={(e) => {handleZIndexBoost(e, app)}} updateState={(newState) => updateAppState(app.id, newState)}>
+                appGroup.map((app, appIndex) => {
+                    if (!app.content) return
+                    return <App label={app.label} state={app.state} uniqueKey={app.id} type={app.type} key={groupIndex+appIndex} onMouseDown={(e) => {handleZIndexBoost(e, app)}} updateState={(newState) => updateAppState(app.id, newState)}>
                         {app.content}
                     </App>
-                ))
+                })
             ))}
-
         </div>
 
         <div id="select-zone" ref={selectZoneRef}></div>

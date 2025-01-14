@@ -12,6 +12,7 @@ export default defineConfig({
         alias: {
             '@atoms': path.resolve(__dirname, 'src/design-system/atoms'),
             '@molecules': path.resolve(__dirname, 'src/design-system/molecules'),
+            "@projects": path.resolve(__dirname, 'src/design-system/projects'),
             '@assets': path.resolve(__dirname, 'src/assets'),
             '@types': path.resolve(__dirname, 'src/types'),
             '@css': path.resolve(__dirname, 'src/css'),

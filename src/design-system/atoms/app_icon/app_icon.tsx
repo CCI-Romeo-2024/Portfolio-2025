@@ -6,7 +6,7 @@ import Server from './icons/Termius.svg';
 import RootMe from './icons/RootMe.svg';
 import OkNestor from './icons/OkNestor.svg';
 import Contact from './icons/Contact.png';
-import Document from './icons/Document.png';
+import Document from './icons/Documents.png';
 import Pages from './icons/Pages.png';
 
 const icons = {

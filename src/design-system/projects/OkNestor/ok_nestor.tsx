@@ -1,52 +1,8 @@
-import './style.scss'
-import {PropsWithChildren, useRef} from "react";
+import '@atoms/project_template/style.scss'
+import {Copy, S} from '@atoms/project_template/project_template.tsx';
 
-export const Copy = ({value, children}: PropsWithChildren<{value: string}>) => {
-    const svgCopyRef = useRef<SVGSVGElement>(null);
-    const svgCopiedRef = useRef<SVGSVGElement>(null);
 
-    const handleClick = () => {
-        navigator.clipboard.writeText(value)
-
-        if (svgCopyRef.current && svgCopiedRef.current) {
-            svgCopyRef.current.style.display = 'none';
-            svgCopiedRef.current.style.display = 'block';
-
-            // Remet l'icône de copie après 2 secondes
-            setTimeout(() => {
-                svgCopyRef.current!.style.display = 'block';
-                svgCopiedRef.current!.style.display = 'none';
-            }, 800);
-        }
-    }
-
-    return <div onClick={handleClick} className={'copy-text-component'} title={'Click pour copier !'}>
-        {children}
-        <div className="icon">
-            <svg ref={svgCopyRef} width="14" height="14" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="5" width="15" height="15" rx="3" stroke="white" strokeWidth="2"/>
-                <path fillRule="evenodd" clipRule="evenodd"
-                      d="M8 2H17C18.1046 2 19 2.89543 19 4V13C19 14.1046 18.1046 15 17 15V17C19.2091 17 21 15.2091 21 13V4C21 1.79086 19.2091 0 17 0H8C5.79086 0 4 1.79086 4 4H6C6 2.89543 6.89543 2 8 2Z"
-                      fill="white"/>
-            </svg>
-
-            <svg ref={svgCopiedRef} style={{display: 'none'}} width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5L4 9L12 1.5" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-        </div>
-    </div>;
-}
-
-interface ISpanStyle {
-    bold?: boolean;
-    italic?: boolean;
-    underline?: boolean;
-}
-export const S = ({bold = false, italic = false, underline = false, children}: PropsWithChildren<ISpanStyle>) => {
-    return <span className={`${bold ? 'bold' : ''} ${italic ? 'italic' : ''} ${underline ? 'underline' : ''}`}>{children}</span>;
-}
-
-export const ProjectTemplate = () => {
+export const OkNestorProject = () => {
     return <div className={'project'}>
         <div className={'project-header'}>
             <div className={'project-header-left'}>
