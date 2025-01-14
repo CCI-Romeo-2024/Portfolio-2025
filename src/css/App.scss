@@ -7,7 +7,7 @@
     width: 100vw;
 
 
-    background: #ffffff url(https://i.pinimg.com/originals/80/05/82/80058231099b67cab36923f567d1db1a.jpg) center center/cover no-repeat local;;
+    background: #ffffff url("../assets/background.jpg") center center/cover no-repeat local;;
 
 
     .apps-container {
@@ -22,5 +22,15 @@
 
     .dock {
         align-self: center;
+    }
+
+    #select-zone {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        background: rgba(255, 255, 255, 0.2);
+        border: solid 1px rgba(255, 255, 255, 0.5);
     }
 }

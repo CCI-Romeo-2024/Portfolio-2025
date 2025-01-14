@@ -1,5 +1,7 @@
-import {ProjectExample} from "@atoms/project_example/project_example.tsx";
-import {ReactElement} from 'react'
+import { ProjectTemplate } from "@atoms/project_template/project_template.tsx";
+import { ReactElement } from 'react'
+import { Terminal } from "@molecules/terminal/terminal.tsx";
+import {Contact} from "@molecules/contact/contact.tsx";
 
 
 export interface IApp {
@@ -8,6 +10,7 @@ export interface IApp {
     content: ReactElement,
     iconKey: 'whatsweb' | 'whatsecosystem' | 'server' | 'rootme' | 'oknestor' | 'contact' | 'document' | 'pages',
     state: 0 | 1 | 2,
+    type: 'application' | 'project' | 'contact',
     onClick?: () => void;
 }
 
@@ -16,16 +19,18 @@ export const defaultApps: IApp[][] = [
         {
             label: 'WhatsWeb',
             id: 'whatsweb',
-            content: <ProjectExample key={'whatsweb'} />,
+            content: <ProjectTemplate key={'whatsweb'} />,
             iconKey: 'whatsweb',
-            state: 2
+            state: 0,
+            type: 'project'
         },
         {
             label: 'RootMe',
             id: 'rootme',
-            content: <ProjectExample key={'rootme'} />,
+            content: <Terminal key={'rootme'} />,
             iconKey: 'rootme',
             state: 0,
+            type: 'application'
             // onClick: () => { openFullscreen(document.querySelector('#app')) }
         }
     ],
@@ -33,9 +38,10 @@ export const defaultApps: IApp[][] = [
         {
             label: 'Contact',
             id: 'contact',
-            content: <ProjectExample key={'contact'} />,
+            content: <Contact key={'contact'} />,
             iconKey: 'contact',
-            state: 0
+            state: 2,
+            type: 'contact'
         }
     ]
 ]
