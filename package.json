@@ -17,7 +17,9 @@
         "gsap": "^3.12.5",
         "interactjs": "^1.10.27",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-hot-toast": "^2.5.1",
+        "react-responsive": "^10.0.0"
     },
     "devDependencies": {
         "@chromatic-com/storybook": "^3.2.2",

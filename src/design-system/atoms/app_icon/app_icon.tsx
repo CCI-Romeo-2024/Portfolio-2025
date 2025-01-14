@@ -8,6 +8,7 @@ import OkNestor from './icons/OkNestor.svg';
 import Contact from './icons/Contact.png';
 import Document from './icons/Documents.png';
 import Pages from './icons/Pages.png';
+import Terminal from './icons/Terminal.png';
 
 const icons = {
     whatsweb: WhatsWeb,
@@ -15,6 +16,7 @@ const icons = {
     server: Server,
     rootme: RootMe,
     oknestor: OkNestor,
+    terminal: Terminal,
     contact: Contact,
     document: Document,
     pages: Pages,
@@ -23,7 +25,7 @@ const icons = {
 export interface IconProps {
     label: string;
     state: 0 | 1 | 2;
-    iconKey: 'whatsweb' | 'whatsecosystem' | 'server' | 'rootme' | 'oknestor' | 'contact' | 'document' | 'pages';
+    iconKey: 'whatsweb' | 'whatsecosystem' | 'server' | 'rootme' | 'oknestor' | 'contact' | 'terminal' | 'document' | 'pages';
     index: number;
     onClick?: () => void;
 }

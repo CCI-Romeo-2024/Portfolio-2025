@@ -4,13 +4,14 @@ import { ReactElement } from 'react'
 // import { Terminal } from '@molecules/terminal/terminal.tsx';
 import { Contact } from '@molecules/contact/contact.tsx';
 import { OkNestorProject, RootmeProject, ServerProject, WhatsWebProject } from '@projects/index.ts';
+import {Terminal} from "@molecules/terminal/terminal.tsx";
 
 
 export interface IApp {
     label: string,
     id: string,
     content: ReactElement | null,
-    iconKey: 'whatsweb' | 'whatsecosystem' | 'server' | 'rootme' | 'oknestor' | 'contact' | 'document' | 'pages',
+    iconKey: 'whatsweb' | 'whatsecosystem' | 'server' | 'rootme' | 'oknestor' | 'terminal' | 'contact' | 'document' | 'pages',
     state: 0 | 1 | 2,
     type: 'application' | 'project' | 'contact',
     onClick?: () => void;
@@ -49,6 +50,16 @@ export const defaultApps: IApp[][] = [
             iconKey: 'oknestor',
             state: 0,
             type: 'project'
+        }
+    ],
+    [
+        {
+            label: 'Terminal',
+            id: 'terminal',
+            content: <Terminal key={'contact'} />,
+            iconKey: 'terminal',
+            state: 0,
+            type: 'application'
         }
     ],
     [
