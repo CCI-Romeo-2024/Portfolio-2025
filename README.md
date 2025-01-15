@@ -14,6 +14,8 @@
 - [ ] Icon external link contact
 - [ ] Add MacOs Loader
 - [ ] Add Start Explication
+- [ ] Finish terminal commands & shortcut 
+- [ ] Change projet tempate (Notions)
 
 
 
